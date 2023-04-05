@@ -11,38 +11,93 @@ html {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
 }
-h1, h2, h3, p, a, li, img {
-    margin: 0;
-    padding: 0;
+h1,
+h2,
+h3,
+p,
+a,
+li,
+img {
+  margin: 0;
+  padding: 0;
 }
 li {
   list-style: none;
 }
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px 24px;
+  padding: 16px 24px;
 }
 .brand {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 .brand img {
-    width: 2rem;
+  width: 2rem;
 }
-.brand h1 {
-    font-size: 1.4rem;
-}
+
 .brand h1 span {
-    font-weight: 400;
-    color: gray;
+  font-weight: 400;
+  color: gray;
 }
-nav ul {
-    display: flex;
-    gap: 16px;
+.desktop ul {
+  display: flex;
+  gap: 16px;
+}
+
+.mobile {
+  display: flex;
+  justify-content: space-around;
+}
+
+.desktop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banner {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #d8d8d8;
+}
+.banner img {
+  width: 100%;
+}
+
+.banner-text {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  width: 100%;
+  padding: 24px;
+}
+
+button {
+  padding: 1rem;
+  background-color: #4a4a4a;
+  color: white;
+  font-size: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .banner img {
+    width: 60%;
+  }
+  .banner-text {
+    width: 30%;
+  }
+  .mobile {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
 }
